@@ -1,0 +1,104 @@
+19.9094 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001A6E780CC70>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001A6E780CC10>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001A6E780CA60>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001A6E7CFBCD0>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([1600,  900]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+19.9096 	EXP 	window1: mouseVisible = True
+19.9096 	EXP 	window1: backgroundImage = ''
+19.9097 	EXP 	window1: backgroundFit = 'none'
+19.9124 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+19.9124 	EXP 	window1: recordFrameIntervals = False
+20.0748 	EXP 	window1: recordFrameIntervals = True
+20.2577 	EXP 	Screen (0) actual frame rate measured at 60.25Hz
+20.2577 	EXP 	window1: recordFrameIntervals = False
+20.2579 	EXP 	window1: mouseVisible = False
+20.2580 	EXP 	exp08: status = STARTED
+20.2585 	EXP 	window1: mouseVisible = True
+20.2587 	EXP 	window1: mouseVisible = True
+20.2643 	EXP 	Created startDisc = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1.0, draggable=False, fillColor=array([-1.        ,  0.00392157, -1.        ]), fillColorSpace='rgb', fillRGB=array([-1.        ,  0.00392157, -1.        ]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='startDisc', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.03, 0.03]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+20.2645 	EXP 	window1: mouseVisible = True
+20.2706 	EXP 	Created probeReady = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, draggable=False, fillColor=array([ 1, -1, -1]), fillColorSpace='rgb', fillRGB=array([ 1, -1, -1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='probeReady', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.01, 0.01]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+20.2710 	EXP 	window1: mouseVisible = True
+20.3847 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0.0, pos=array([ 0.  , -0.32]), rgb=UNKNOWN, text='準備ができたらマウスの左ボタンをクリックしてください', units='height', win=Window(...), wrapWidth=1)
+20.3848 	EXP 	window1: mouseVisible = True
+20.3850 	EXP 	window1: mouseVisible = False
+20.3850 	EXP 	window1: mouseVisible = False
+20.3854 	EXP 	window1: mouseVisible = True
+20.3881 	EXP 	Created path1 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-2.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='path1', opacity=1.0, ori=1.0, pos=array([0., 0.]), size=array([0.24, 0.02]), units='height', vertices=ndarray(...), win=Window(...))
+20.3882 	EXP 	window1: mouseVisible = True
+20.3907 	EXP 	Created path2 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='path2', opacity=1.0, ori=1.0, pos=array([0., 0.]), size=array([0.24, 0.02]), units='height', vertices=ndarray(...), win=Window(...))
+20.3908 	EXP 	window1: mouseVisible = True
+20.3933 	EXP 	Created path3 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-4.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='path3', opacity=1.0, ori=1.0, pos=array([0., 0.]), size=array([0.24, 0.02]), units='height', vertices=ndarray(...), win=Window(...))
+20.3934 	EXP 	window1: mouseVisible = True
+20.3959 	EXP 	Created path4 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-5.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='path4', opacity=1.0, ori=1.0, pos=array([0., 0.]), size=array([0.24, 0.02]), units='height', vertices=ndarray(...), win=Window(...))
+20.3960 	EXP 	window1: mouseVisible = True
+20.3985 	EXP 	Created path5 = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-6.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='path5', opacity=1.0, ori=1.0, pos=array([0., 0.]), size=array([0.24, 0.02]), units='height', vertices=ndarray(...), win=Window(...))
+20.3986 	EXP 	window1: mouseVisible = True
+20.4043 	EXP 	Created goalDisc = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-7.0, draggable=False, fillColor=array([-1.        ,  0.00392157, -1.        ]), fillColorSpace='rgb', fillRGB=array([-1.        ,  0.00392157, -1.        ]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='goalDisc', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.03, 0.03]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+20.4044 	EXP 	window1: mouseVisible = True
+20.4095 	EXP 	Created probe = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-8.0, draggable=False, fillColor=array([ 1, -1, -1]), fillColorSpace='rgb', fillRGB=array([ 1, -1, -1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='probe', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.01, 0.01]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+0.0237 	EXP 	Imported exp08cnd.xlsx as conditions, 10 conditions, 12 params
+0.0244 	EXP 	Created sequence: random, trialTypes=10, nReps=1, seed=None
+0.0247 	EXP 	New trial (rep=0, index=0): {'path1pos': (0.0337, 0.1964), 'path1ori': -108, 'path2pos': (-0.0337, 0.1964), 'path2ori': -72, 'path3pos': (-0.1763, 0.0927), 'path3ori': 0, 'path4pos': (-0.1971, 0.0286), 'path4ori': -144, 'path5pos': (-0.1427, -0.1391), 'path5ori': -72, 'startPos': (0.0674, 0.0927), 'goalPos': (-0.1763, -0.2427)}
+0.0365 	EXP 	startDisc: autoDraw = True
+0.0365 	EXP 	probeReady: autoDraw = True
+0.0365 	EXP 	text: autoDraw = True
+8.1213 	DATA 	Mouse: Left button down, pos=(860,535)
+8.1519 	EXP 	startDisc: autoDraw = False
+8.1519 	EXP 	probeReady: autoDraw = False
+8.1519 	EXP 	text: autoDraw = False
+8.1519 	EXP 	path1: ori = -108.0
+8.1519 	EXP 	path2: ori = -72.0
+8.1519 	EXP 	path3: ori = 0.0
+8.1519 	EXP 	path4: ori = -144.0
+8.1519 	EXP 	path5: ori = -72.0
+8.1519 	EXP 	path1: autoDraw = True
+8.1519 	EXP 	path2: autoDraw = True
+8.1519 	EXP 	path3: autoDraw = True
+8.1519 	EXP 	path4: autoDraw = True
+8.1519 	EXP 	path5: autoDraw = True
+8.1519 	EXP 	goalDisc: autoDraw = True
+8.1519 	EXP 	probe: autoDraw = True
+8.2678 	DATA 	Mouse:  Left button up, pos=(860,366)
+29.3308 	EXP 	New trial (rep=0, index=1): {'path1pos': (-0.1427, -0.1391), 'path1ori': -72, 'path2pos': (-0.0882, -0.1786), 'path2ori': -36, 'path3pos': (0.0882, -0.1786), 'path3ori': -144, 'path4pos': (0.1427, -0.1391), 'path4ori': -108, 'path5pos': (0.1971, 0.0286), 'path5ori': -36, 'startPos': (-0.109, -0.0354), 'goalPos': (0.2853, 0.0927)}
+29.3421 	EXP 	path1: autoDraw = False
+29.3421 	EXP 	path2: autoDraw = False
+29.3421 	EXP 	path3: autoDraw = False
+29.3421 	EXP 	path4: autoDraw = False
+29.3421 	EXP 	path5: autoDraw = False
+29.3421 	EXP 	goalDisc: autoDraw = False
+29.3421 	EXP 	probe: autoDraw = False
+29.3421 	EXP 	startDisc: autoDraw = True
+29.3421 	EXP 	probeReady: autoDraw = True
+29.3421 	EXP 	text: autoDraw = True
+31.2809 	DATA 	Mouse: Left button down, pos=(703,419)
+31.3113 	EXP 	startDisc: autoDraw = False
+31.3113 	EXP 	probeReady: autoDraw = False
+31.3113 	EXP 	text: autoDraw = False
+31.3113 	EXP 	path1: ori = -72.0
+31.3113 	EXP 	path2: ori = -36.0
+31.3113 	EXP 	path3: ori = -144.0
+31.3113 	EXP 	path4: ori = -108.0
+31.3113 	EXP 	path5: ori = -36.0
+31.3113 	EXP 	path1: autoDraw = True
+31.3113 	EXP 	path2: autoDraw = True
+31.3113 	EXP 	path3: autoDraw = True
+31.3113 	EXP 	path4: autoDraw = True
+31.3113 	EXP 	path5: autoDraw = True
+31.3113 	EXP 	goalDisc: autoDraw = True
+31.3113 	EXP 	probe: autoDraw = True
+31.3876 	DATA 	Mouse:  Left button up, pos=(701,481)
+51.9635 	EXP 	New trial (rep=0, index=2): {'path1pos': (-0.0337, 0.1964), 'path1ori': -72, 'path2pos': (0.0337, 0.1964), 'path2ori': -108, 'path3pos': (0.1763, 0.0927), 'path3ori': 0, 'path4pos': (0.1971, 0.0286), 'path4ori': -36, 'path5pos': (0.1427, -0.1391), 'path5ori': -108, 'startPos': (-0.0674, 0.0927), 'goalPos': (0.1763, -0.2427)}
+51.9750 	EXP 	path1: autoDraw = False
+51.9750 	EXP 	path2: autoDraw = False
+51.9750 	EXP 	path3: autoDraw = False
+51.9750 	EXP 	path4: autoDraw = False
+51.9750 	EXP 	path5: autoDraw = False
+51.9750 	EXP 	goalDisc: autoDraw = False
+51.9750 	EXP 	probe: autoDraw = False
+51.9750 	EXP 	startDisc: autoDraw = True
+51.9750 	EXP 	probeReady: autoDraw = True
+51.9750 	EXP 	text: autoDraw = True
+53.6973 	DATA 	Keypress: escape
+53.6984 	EXP 	exp08: status = STOPPED
+53.7131 	EXP 	startDisc: autoDraw = False
+53.7131 	EXP 	probeReady: autoDraw = False
+53.7131 	EXP 	text: autoDraw = False
+53.7132 	EXP 	exp08: status = STOPPED
+54.0190 	EXP 	window1: mouseVisible = True
