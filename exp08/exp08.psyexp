@@ -5,7 +5,7 @@
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
     <Param val="" valType="str" updates="None" name="Completed URL"/>
     <Param val="auto" valType="str" updates="None" name="Data file delimiter"/>
-    <Param val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
+    <Param val="u'data/%s' % (expInfo['participant'])" valType="code" updates="None" name="Data filename"/>
     <Param val="True" valType="bool" updates="None" name="Enable Escape"/>
     <Param val="" valType="str" updates="None" name="End Message"/>
     <Param val="{'participant': 'f&quot;{randint(0, 999999):06.0f}&quot;', 'session': '001'}" valType="code" updates="None" name="Experiment info"/>
@@ -48,7 +48,7 @@
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
     <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
     <Param val="4242" valType="num" updates="None" name="gpPort"/>
-    <Param val="Pyglet" valType="str" updates="None" name="keyboardBackend"/>
+    <Param val="PsychToolbox" valType="str" updates="None" name="keyboardBackend"/>
     <Param val="exp" valType="code" updates="None" name="logging level"/>
     <Param val="('MIDDLE_BUTTON',)" valType="list" updates="None" name="mgBlink"/>
     <Param val="CONTINUOUS" valType="str" updates="None" name="mgMove"/>
@@ -112,17 +112,17 @@
       <CodeComponent name="codeTrial" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="mouseTrial.setVisible(False)&amp;#10;mouseReady.setVisible(False)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="mouseTrial.setVisible(False)&amp;#10;mouseReady.setVisible(False)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="mouseTrial.setVisible(false);&amp;#10;mouseReady.setVisible(false);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="mouseTrial.setPos([startPos[0], (- startPos[1])]);&amp;#10;probeX_list = [];&amp;#10;probeY_list = [];&amp;#10;onPath_list = [];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="mouseTrial.setPos([startPos[0], -startPos[1]])&amp;#10;probeX_list = [ ]&amp;#10;probeY_list = [ ]&amp;#10;onPath_list = [ ]&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="mouseTrial.setPos([startPos[0], (- startPos[1])]);&amp;#10;probeX_list = [];&amp;#10;probeY_list = [];&amp;#10;onPath_list = [];&amp;#10;frameN_list = [];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="mouseTrial.setPos([startPos[0], -startPos[1]])&amp;#10;probeX_list = [ ]&amp;#10;probeY_list = [ ]&amp;#10;onPath_list = [ ]&amp;#10;frameN_list = [ ]" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="mousePos = mouseTrial.getPos()&amp;#10;px = mousePos[0]&amp;#10;py = -mousePos[1]&amp;#10;if goalDisc.contains([px, py]):&amp;#10;    continueRoutine = False&amp;#10;onPath = False&amp;#10;for path in [path1, path2, path3, path4, path5]:&amp;#10;    if path.contains([px, py]):&amp;#10;        onPath = True&amp;#10;        break&amp;#10;probeX_list.append(px)&amp;#10;probeY_list.append(py)&amp;#10;onPath_list.append(onPath)" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="mousePos = mouseTrial.getPos();&amp;#10;px = mousePos[0];&amp;#10;py = (- mousePos[1]);&amp;#10;if (goalDisc.contains([px, py])) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;onPath = false;&amp;#10;for (var path, _pj_c = 0, _pj_a = [path1, path2, path3, path4, path5], _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;    path = _pj_a[_pj_c];&amp;#10;    if (path.contains([px, py])) {&amp;#10;        onPath = true;&amp;#10;        break;&amp;#10;    }&amp;#10;}&amp;#10;probeX_list.push(px);&amp;#10;probeY_list.push(py);&amp;#10;onPath_list.push(onPath);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="mousePos = mouseTrial.getPos()&amp;#10;px = mousePos[0]&amp;#10;py = -mousePos[1]&amp;#10;if goalDisc.contains([px, py]):&amp;#10;    continueRoutine = False&amp;#10;onPath = False&amp;#10;for path in [path1, path2, path3, path4, path5]:&amp;#10;    if path.contains([px, py]):&amp;#10;        onPath = True&amp;#10;        break&amp;#10;&amp;#10;if frameN % 6 == 0:&amp;#10;    probeX_list.append(px)&amp;#10;    probeY_list.append(py)&amp;#10;    onPath_list.append(onPath)" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="mousePos = mouseTrial.getPos();&amp;#10;px = mousePos[0];&amp;#10;py = (- mousePos[1]);&amp;#10;if (goalDisc.contains([px, py])) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;onPath = false;&amp;#10;for (var path, _pj_c = 0, _pj_a = [path1, path2, path3, path4, path5], _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;    path = _pj_a[_pj_c];&amp;#10;    if (path.contains([px, py])) {&amp;#10;        onPath = true;&amp;#10;        break;&amp;#10;    }&amp;#10;}&amp;#10;if (((frameN % 6) === 0)) {&amp;#10;    probeX_list.push(px);&amp;#10;    probeY_list.push(py);&amp;#10;    onPath_list.push(onPath);&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="trials.addData(&quot;probe_x&quot;, probeX_list);&amp;#10;trials.addData(&quot;probe_y&quot;, probeY_list);&amp;#10;trials.addData(&quot;on_path&quot;, onPath_list);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="trials.addData('probe_x', probeX_list)&amp;#10;trials.addData('probe_y', probeY_list)&amp;#10;trials.addData('on_path', onPath_list)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="trials.addData(&quot;probe_x&quot;, probeX_list);&amp;#10;trials.addData(&quot;probe_y&quot;, probeY_list);&amp;#10;trials.addData(&quot;on_path&quot;, onPath_list);&amp;#10;trials.addData(&quot;frameN&quot;, frameN_list);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="trials.addData('probe_x', probeX_list)&amp;#10;trials.addData('probe_y', probeY_list)&amp;#10;trials.addData('on_path', onPath_list)&amp;#10;trials.addData('frameN', frameN_list)" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="codeTrial" valType="code" updates="None" name="name"/>
       </CodeComponent>

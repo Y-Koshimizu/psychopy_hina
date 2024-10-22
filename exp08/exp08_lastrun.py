@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on 9月 19, 2024, at 17:23
+    on 10月 22, 2024, at 16:13
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -96,7 +96,7 @@ def setupData(expInfo, dataDir=None):
     # data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
     if dataDir is None:
         dataDir = _thisDir
-    filename = u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])
+    filename = u'data/%s' % (expInfo['participant'])
     # make sure filename is relative to dataDir
     if os.path.isabs(filename):
         dataDir = os.path.commonprefix([dataDir, filename])
@@ -106,7 +106,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\user\\Documents\\PsychoPy\\2024\\hina\\exp08\\exp08_lastrun.py',
+        originPath='C:\\Users\\user\\Documents\\2024\\pabro\\exp08\\exp08_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -203,7 +203,7 @@ def setupInputs(expInfo, thisExp, win):
     ioSession = ioServer = eyetracker = None
     
     # create a default keyboard (e.g. to check for escape)
-    defaultKeyboard = keyboard.Keyboard(backend='event')
+    defaultKeyboard = keyboard.Keyboard(backend='ptb')
     # return inputs dict
     return {
         'ioServer': ioServer,
@@ -243,7 +243,7 @@ def pauseExperiment(thisExp, inputs=None, win=None, timers=[], playbackComponent
         # make sure we have a keyboard
         if inputs is None:
             inputs = {
-                'defaultKeyboard': keyboard.Keyboard(backend='Pyglet')
+                'defaultKeyboard': keyboard.Keyboard(backend='PsychToolbox')
             }
         # check for quit (typically the Esc key)
         if inputs['defaultKeyboard'].getKeys(keyList=['escape']):
@@ -336,6 +336,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from codeTrial
     mouseTrial.setVisible(False)
     mouseReady.setVisible(False)
+    
     path1 = visual.Rect(
         win=win, name='path1',
         width=(0.24, 0.02)[0], height=(0.24, 0.02)[1],
@@ -572,7 +573,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         probeX_list = [ ]
         probeY_list = [ ]
         onPath_list = [ ]
-        
+        frameN_list = [ ]
         path1.setPos(path1pos)
         path1.setOri(path1ori)
         path2.setPos(path2pos)
@@ -633,9 +634,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 if path.contains([px, py]):
                     onPath = True
                     break
-            probeX_list.append(px)
-            probeY_list.append(py)
-            onPath_list.append(onPath)
+            
+            if frameN % 6 == 0:
+                probeX_list.append(px)
+                probeY_list.append(py)
+                onPath_list.append(onPath)
             
             # *path1* updates
             
@@ -808,6 +811,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         trials.addData('probe_x', probeX_list)
         trials.addData('probe_y', probeY_list)
         trials.addData('on_path', onPath_list)
+        trials.addData('frameN', frameN_list)
         # the Routine "trial" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()

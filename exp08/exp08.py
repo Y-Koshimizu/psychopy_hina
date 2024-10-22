@@ -1,8 +1,8 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on 9月 19, 2024, at 16:43
+    on 10月 22, 2024, at 16:41
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -96,7 +96,7 @@ def setupData(expInfo, dataDir=None):
     # data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
     if dataDir is None:
         dataDir = _thisDir
-    filename = u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])
+    filename = u'data/%s' % (expInfo['participant'])
     # make sure filename is relative to dataDir
     if os.path.isabs(filename):
         dataDir = os.path.commonprefix([dataDir, filename])
@@ -106,7 +106,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\user\\Documents\\PsychoPy\\2024\\hina\\exp08\\exp08.py',
+        originPath='C:\\Users\\user\\Documents\\2024\\pabro\\exp08\\exp08.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -203,7 +203,7 @@ def setupInputs(expInfo, thisExp, win):
     ioSession = ioServer = eyetracker = None
     
     # create a default keyboard (e.g. to check for escape)
-    defaultKeyboard = keyboard.Keyboard(backend='event')
+    defaultKeyboard = keyboard.Keyboard(backend='ptb')
     # return inputs dict
     return {
         'ioServer': ioServer,
@@ -243,7 +243,7 @@ def pauseExperiment(thisExp, inputs=None, win=None, timers=[], playbackComponent
         # make sure we have a keyboard
         if inputs is None:
             inputs = {
-                'defaultKeyboard': keyboard.Keyboard(backend='Pyglet')
+                'defaultKeyboard': keyboard.Keyboard(backend='PsychToolbox')
             }
         # check for quit (typically the Esc key)
         if inputs['defaultKeyboard'].getKeys(keyList=['escape']):
@@ -336,6 +336,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from codeTrial
     mouseTrial.setVisible(False)
     mouseReady.setVisible(False)
+    
     path1 = visual.Rect(
         win=win, name='path1',
         width=(0.24, 0.02)[0], height=(0.24, 0.02)[1],
@@ -391,19 +392,19 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     expInfo['expStart'] = data.getDateStr(format='%Y-%m-%d %Hh%M.%S.%f %z', fractionalSecondDigits=6)
     
     # set up handler to look after randomisation of conditions etc
-    exp8 = data.TrialHandler(nReps=1.0, method='random', 
+    trials = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('exp08cnd.xlsx'),
-        seed=None, name='exp8')
-    thisExp.addLoop(exp8)  # add the loop to the experiment
-    thisExp8 = exp8.trialList[0]  # so we can initialise stimuli with some values
-    # abbreviate parameter names if possible (e.g. rgb = thisExp8.rgb)
-    if thisExp8 != None:
-        for paramName in thisExp8:
-            globals()[paramName] = thisExp8[paramName]
+        seed=None, name='trials')
+    thisExp.addLoop(trials)  # add the loop to the experiment
+    thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
+    # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
+    if thisTrial != None:
+        for paramName in thisTrial:
+            globals()[paramName] = thisTrial[paramName]
     
-    for thisExp8 in exp8:
-        currentLoop = exp8
+    for thisTrial in trials:
+        currentLoop = trials
         thisExp.timestampOnFlip(win, 'thisRow.t')
         # pause experiment here if requested
         if thisExp.status == PAUSED:
@@ -414,10 +415,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 timers=[routineTimer], 
                 playbackComponents=[]
         )
-        # abbreviate parameter names if possible (e.g. rgb = thisExp8.rgb)
-        if thisExp8 != None:
-            for paramName in thisExp8:
-                globals()[paramName] = thisExp8[paramName]
+        # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
+        if thisTrial != None:
+            for paramName in thisTrial:
+                globals()[paramName] = thisTrial[paramName]
         
         # --- Prepare to start Routine "ready" ---
         continueRoutine = True
@@ -557,7 +558,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('ready.stopped', globalClock.getTime())
-        # store data for exp8 (TrialHandler)
+        # store data for trials (TrialHandler)
         # the Routine "ready" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
@@ -572,7 +573,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         probeX_list = [ ]
         probeY_list = [ ]
         onPath_list = [ ]
-        
+        frameN_list = [ ]
         path1.setPos(path1pos)
         path1.setOri(path1ori)
         path2.setPos(path2pos)
@@ -633,9 +634,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 if path.contains([px, py]):
                     onPath = True
                     break
-            probeX_list.append(px)
-            probeY_list.append(py)
-            onPath_list.append(onPath)
+            
+            if frameN % 6 == 0:
+                probeX_list.append(px)
+                probeY_list.append(py)
+                onPath_list.append(onPath)
             
             # *path1* updates
             
@@ -803,11 +806,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
         thisExp.addData('trial.stopped', globalClock.getTime())
-        # store data for exp8 (TrialHandler)
+        # store data for trials (TrialHandler)
         # Run 'End Routine' code from codeTrial
         trials.addData('probe_x', probeX_list)
         trials.addData('probe_y', probeY_list)
         trials.addData('on_path', onPath_list)
+        trials.addData('frameN', frameN_list)
         # the Routine "trial" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
@@ -815,15 +819,15 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
-    # completed 1.0 repeats of 'exp8'
+    # completed 1.0 repeats of 'trials'
     
     # get names of stimulus parameters
-    if exp8.trialList in ([], [None], None):
+    if trials.trialList in ([], [None], None):
         params = []
     else:
-        params = exp8.trialList[0].keys()
+        params = trials.trialList[0].keys()
     # save data for this loop
-    exp8.saveAsExcel(filename + '.xlsx', sheetName='exp8',
+    trials.saveAsExcel(filename + '.xlsx', sheetName='trials',
         stimOut=params,
         dataOut=['n','all_mean','all_std', 'all_raw'])
     
